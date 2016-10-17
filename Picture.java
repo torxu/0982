@@ -16,6 +16,7 @@ public class Picture
     private Triangle roof;
     private Circle sun;
     private Square suelo;
+    private Person pepe;
     
     /**
      * Constructor for objects of class Picture
@@ -62,8 +63,12 @@ public class Picture
         suelo.moveHorizontal(-350);
         suelo.moveVertical(120);
         suelo.makeVisible();
-       
-    }
+        
+        pepe = new Person();
+        pepe.makeVisible();
+        pepe.moveHorizontal(-200);
+        pepe.moveVertical(10);
+        }
 
     /**
      * Change this picture to black/white display
@@ -104,5 +109,14 @@ public class Picture
         roof.changeColor("black");
         wall.changeColor("black");
         window.changeColor("white");
+    }
+    
+    /**
+     * Persona
+     */
+    public void Person()
+    {
+        pepe.makeVisible();
+        pepe.slowMoveHorizontal(100);
     }
 }
